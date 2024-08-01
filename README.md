@@ -4,12 +4,12 @@ PlaceHub API é um projeto simples construído com Laravel para gerenciar lugare
 
 ## Especificações
 
-- Laravel 10
+- Laravel 11
 - PHP 8.2
 - PostgreSQL 16
 
 ## Configurações Iniciais
-
+### Instalação local
 1. **Clone o repositório:**
    ```sh
    git clone https://github.com/sarev17/placehub-api.git
@@ -42,19 +42,34 @@ PlaceHub API é um projeto simples construído com Laravel para gerenciar lugare
     ```sh
     php artisan migrate
 
-
 7. **Executando a Aplicação**
     Para iniciar o servidor de desenvolvimento do Laravel, utilize o comando:
     ```sh
     php artisan serve
     Acesse a aplicação em http://localhost:8000.
 
-:⚠ Ao enviar a solicitação, certifique-se de que o cabeçalho Accept: application/json está presente. 
+### Executando a aplicação com Docker
+Esse projeto foi contruído com Laravel Sail para facilitar a execução de um conteiner, aqui vão algumas sugestões para a excução:
+- Use o WSL para execuar a aplicação Laravel
+- Pode ser conveniente criar um link simbólico no arquivo hosts:
+    ```sh
+    C:\Windows\System32\drivers\etc
+    127.0.0.1 placehub.test
+    ```
+- Execute o container
+    ```sh
+    ./vendor/bin/sail up
+    ```
+- Execute os comando dentro do conteiner docker
+  Ao invés de usar ``php artisan migrate`` use ``./vendor/bin/sail artisan migrate``
+  
+⚠ Ao enviar a solicitação, certifique-se de que o cabeçalho Accept: application/json está presente. 
  
  ## Testanto a API
  Para testar a API, você pode utilizar ferramentas como Postman ou cURL, porém a aplicação disponibiliza uma interface no próprio navegador usando swagger.
- Para isso acesse ``http://localhost:8000/api/documentation``
+ Para isso acesse ``placehub.teste/api/documentation`` ``ou localhost``
 
  <img src="https://github.com/sarev17/placehub-api/blob/main/public/images/Captura%20de%20tela%202024-08-01%20000841.png"></img>
 
+Se preferir pode usar um software de sua preferência usa essa [collection]()
  
