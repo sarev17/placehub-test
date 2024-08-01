@@ -32,18 +32,14 @@ PlaceHub API é um projeto simples construído com Laravel para gerenciar lugare
 4. **Verifique a conexão com o banco de dados:**
     Certifique-se de que o serviço do PostgreSQL está em execução e que as credenciais no arquivo .env estão corretas.
 
-5. **Inicialize o banco de dados:** (opcional)
-    Crie o banco de dados:
-    ```sh
-    php artisan db:create
 
-6. **Execute as migrações:**
+5. **Execute as migrações:**
     Para criar as tabelas no banco de dados:
     ```sh
     php artisan migrate
 
 
-7. **Executando a Aplicação**
+6. **Executando a Aplicação**
     Para iniciar o servidor de desenvolvimento do Laravel, utilize o comando:
     ```sh
     php artisan serve
