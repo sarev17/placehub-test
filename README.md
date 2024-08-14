@@ -54,7 +54,7 @@ Esse projeto foi construído com Laravel Sail, caso deseje usar um conteiner sig
     ```
 3. Levante o container
    ```sh
-   ./vendor/bin/sail up
+   ./vendor/bin/sail up -d
    ```
 4. Mantenha as configurações iniciais do .env e execute as migrações dentro do container
    ```sh
